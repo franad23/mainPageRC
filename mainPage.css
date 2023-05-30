@@ -1,0 +1,351 @@
+/* Se establecen 5 BP para el diseño responsive
+1. hasta 425px
+2. entre 425px y 768px
+3. entre 768px y  992px
+4. entre 992px y 1200px 
+5. mas de 1200px */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-Logo-title: 'Oswald', sans-serif;
+    --font-navBar: "Ubuntu", monospace;
+    --font-rest: "Ubuntu mono", monospace;
+    --font-weigth-rest: 700;
+    --background-landingPage: linear-gradient(180deg, #5B3567 0%, #090f1f 43%);
+    --background-btn: rgb(253, 47, 92);
+    --background-btnGradient: linear-gradient(54deg, #fd2f5c 0%, #fe8c01 100%);
+    --background-navBar: #5B3567;
+    --background-cards: #090f1f;
+    --background-body-mainPage: #090f1f;
+    --heartFav-Color: rgb(253, 47, 92);
+
+}
+body {
+    background: var(--background-body-mainPage);
+    background-attachment: fixed;
+}
+.title {
+    color: white;
+    font-size: 2rem;
+    margin-bottom: 0;
+    font-family: var(--font-Logo-title);
+}
+h1 {
+    font-size: 1.5rem;
+    font-family: var(--font-Logo-title);
+}
+a {
+    text-decoration: none;
+}
+/* -----------navBar---------- */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: var(--background-navBar);
+}
+.optNavBar {
+    font-family: var(--font-navBar);
+    font-weight: var(--font-weigth-rest);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    /* background: var(--background-btn); */
+    background: var(--background-btnGradient);
+    padding: 10px 40px;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+.optNavBar:active {
+    transform: translate(3px,3px);
+    -webkit-transform: translate(3px,3px);
+    -moz-transform: translate(3px,3px);
+}
+.usersCartCont {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.optNavBarCont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.iconUserNavBar{
+    color: white;
+    font-size: 1.5rem;
+}
+.admin {
+    display: none;
+}
+/* ---------DropddownMenuNavBar---------- */
+.dropdownOpt {
+    display: none;
+    border: none;
+    background: var(--background-btnGradient);
+    outline: none;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+.dropdown-menu {
+    background: var(--background-btnGradient);
+}
+.optNavBarDropDown {
+    font-family: var(--font-navBar);
+    font-weight: var(--font-weigth-rest);
+    padding-left: 5%;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+}
+.dropdown-toggle::after {
+    display: none;
+    content: "";
+}
+/* ---------DropddownMenuNavBar---------- */
+/* -----------DropDownUserNavBar---------- */
+button {
+    outline: none;
+
+}
+.dropdownUser {
+    background: none;
+    border: none;
+    outline: none;
+}
+
+/* .btn:hover {
+    color: transparent;
+} */
+/* -----------DropDownUserNavBar---------- */
+/* ----------Carrousel---------- */
+
+.carrouselMin {
+    display: none;
+}
+/* -----------LastNews---------- */
+.lastNewsCont {
+    padding: 10px 40px;
+}
+hr {
+    color: white;
+}
+
+/* --------SCROLBAR-------- */
+*::-webkit-scrollbar {
+    width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--background-body);
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #fe8c01;
+}
+/* ---------Favoritosoffcanvas---------- */
+.offcanvas {
+    background-color: #fe8c01;
+}
+.cardFavCont {
+    position: relative;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: solid transparent 1px;
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+.btnDeleteFav {
+    position: absolute;
+    display: none;
+    font-family: var(--font-Logo-title);
+}
+.priceNameContFav {
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+}
+.priceContFav {
+    display: flex;
+    justify-content: space-between;
+}
+.cardFavCont:hover {
+    cursor: pointer;
+    border: solid var(--background-cards) 1px;
+}
+.cardFavCont:hover {
+    .btnDeleteFav {
+        display: block;
+    }
+}
+/* ------------CardsLastNews------------ */
+.imgCard {
+    width:100%;
+    height:100%;
+    object-fit: cover;
+    border-radius: 15px 15px 0 0;
+}
+
+.priceCardContName {
+    margin-top: 5%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    font-family: var(--font-rest);
+}
+.priceCardCont {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.cardProdCont {
+    width: 250px;
+    height: 400px;
+    border: transparent solid 1px;
+    border-radius: 15px;
+    color: white;
+    background-color: var(--background-cards);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+.lastNewsCardsCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.disc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:medium;
+}
+.iconCards {
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 30px;
+    text-align: end;
+}
+.iconCards:hover {
+    cursor: pointer;
+    color: var(--heartFav-Color);
+}
+.cardProdCont:hover {
+    cursor: pointer;
+    .iconCards {
+        color: var(--heartFav-Color);
+        display: block;
+    }
+}
+.imgCardContLN {
+    position: relative;
+}
+/* -----------MEDIAQUERIES---------- */
+
+@media (max-width: 426px) {
+    .iconCards {
+        display: block;
+    }
+    .lastNewsCardsCont {
+        justify-content: center;
+    }
+    .cardProdCont {
+        width: 100%;
+    }
+    .priceCardContName{
+        font-size: 1.2rem;
+    }
+    .carrouselMin{
+        display: block;
+    }
+    .carrouselMax {
+        display: none;
+    }
+    .logoCont {
+        display: none;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    .iconCards {
+        color: var(--heartFav-Color);
+        display: block;
+    }
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    .iconCards {
+        display: block;
+    }
+    .lastNewsCardsCont {
+        justify-content: space-evenly;
+    }
+    .logoCont {
+        display: flex;
+        gap: 10px;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    .iconCards {
+        color: var(--heartFav-Color);
+        display: block;
+    }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .iconCards {
+        display: block;
+    }
+    .lastNewsCardsCont {
+        justify-content: space-evenly;
+    }
+    .logoCont {
+        display: flex;
+        gap: 10px;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .optNavBar {
+        padding: 10px 20px;
+    }
+
+}
+@media (min-width: 1200px) {
+}
