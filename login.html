@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login RCGS</title>
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('7w4k8W8tJ8oLiaJtu')
+</script>
+  <link rel="stylesheet" href="./css/login.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:ital@1&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="cont">
+    <!-- form start -->
+    <form method="GET" id="form" class="form">
+      <h1 class=" welcome "> ¡Bienvenido! </h1>
+
+      <div class="email" class="">
+
+
+        <label for="email" class="email-label">Email</label>
+        <br>
+        <i class="fa-solid fa-at"></i>
+        <input type="email" name="email" id="email" placeholder="rolling@school.com" class="email" minlength="6" maxlength="30" required>
+      </div>
+      <!--input contraseña y su icono-->
+      <div class="password-div ">
+        <label for="Contraseña" class="label-password">Contraseña</label>
+        <br>
+        <i class="fa-solid fa-lock"></i>
+        <input type="password" name="contraseña" id="password" value="" class="password" minlength="6" maxlength="30" required>
+      </div>
+
+
+      <!--link al registro de usuario-->
+      <p class="createacount"> ¿No tenes cuenta?
+        <a href="./register.html">Registrate</a>
+      </p>
+
+      <hr class="line">
+      <input type="submit" value="Ingresar" class="register-Button" id="button" >
+
+
+    </form>
+  </div>
+
+  <script src="./js/login.js" type="module"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+    
+</body>
+</div>
+
+</html>

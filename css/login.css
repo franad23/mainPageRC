@@ -1,0 +1,120 @@
+/* Se establecen 5 BP para el diseño responsive
+1. hasta 425px
+2. entre 425px y 768px
+3. entre 768px y  992px
+4. entre 992px y 1200px 
+5. mas de 1200px */
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-Logo-title: 'Oswald', sans-serif;
+    --font-navBar: "Ubuntu", monospace;
+    --font-rest: "Ubuntu mono", monospace;
+    --font-weigth-rest: 700;
+    --background-landingPage: linear-gradient(180deg, #5B3567 0%, #090f1f 43%);
+    --background-btn: rgb(253, 47, 92);
+    --background-btnGradient: linear-gradient(54deg, #fd2f5c 0%, #fe8c01 100%);
+    --background-navBar: #5B3567;
+    --background-cards: #090f1f;
+    --background-body-mainPage: #090f1f;
+    --heartFav-Color: rgb(253, 47, 92);
+
+}
+
+body {
+    background: var(--background-landingPage);
+    background-attachment: fixed;
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    justify-content: center;
+}
+.cont{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+} 
+form {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #ccd0c3;
+    padding: 20px;
+    margin-top: 5%;
+    height: 60%;
+    border-radius: 15px;
+    -webkit-box-shadow: 5px 5px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 5px 5px 0px 0px rgba(184,35,69,1);
+    box-shadow: 5px 5px 0px 0px rgba(184,35,69,1);
+}
+h1 {
+    font-family: var(--font-Logo-title);
+
+}
+label {
+    font-family: var(--font-navBar);
+    margin-bottom: 1px;
+    
+}
+
+input {
+    margin: 10px 10px;
+    font-family: var(--font-rest);
+    width: 80%;
+    border: none;
+    outline: none;
+    background-color: #ccd0c3;
+}
+
+button {
+    background: linear-gradient(54deg, #fd2f5c 0%, #fe8c01 100%);
+    margin-bottom: 25px;
+    height: 30px;
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.welcome {
+    margin-bottom: 30px;
+    align-self: center;
+    font-family: 'Oswald', sans-serif;
+}
+
+.createacount {
+    text-align: right;
+    margin: 0px;
+    width: 100%;
+    font-size: x-small;
+    /* font-family: 'Ubuntu Mono', monospace; */
+    font-family: var(--font-navBar);
+    font-size: 1rem;
+}
+
+.register-Button {
+    background: linear-gradient(54deg, #fd2f5c 0%, #fe8c01 100%);
+    font-family: 'Oswald', sans-serif;
+    width: 400px;
+    font-size: large;
+    border-radius: 5px;
+    align-self: center;
+}
+
+
+@media (max-width : 426px){
+    .register-Button{width: 100%;}
+}
+@media (min-width: 426px) and (max-width: 768px){
+    .form{width: 80%;}
+    .label{align-self: center;}
+    .register-Button{width: 100%;}
+}
+@media (min-width: 768px) {
+    .form{width:40%}
+    .register-Button{width: 100%;}
+}
+
+/*falta ver que se hace un scrol en la pag*/
