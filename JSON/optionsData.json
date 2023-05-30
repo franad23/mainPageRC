@@ -1,0 +1,38 @@
+[
+    {
+        "id": "processor",
+        "img": "./img/IMG Menu Seleccionar/ProcessorBorder.png" 
+    },
+    {
+        "id": "Motherboard",
+        "img": "./img/IMG Menu Seleccionar/MotherBoardBorder.png" 
+    },
+    {
+        "id": "RAM",
+        "img": "./img/IMG Menu Seleccionar/ramBorder.png" 
+    },
+    {
+        "id": "DISK",
+        "img": "./img/IMG Menu Seleccionar/ssdBorder.png" 
+    },
+    {
+        "id": "graphicCard",
+        "img": "./img/IMG Menu Seleccionar/GraphicCardBorder.png" 
+    },
+    {
+        "id": "FAN",
+        "img": "./img/IMG Menu Seleccionar/Fanborder.png" 
+    },
+    {
+        "id": "POWER",
+        "img": "./img/IMG Menu Seleccionar/PowerBorder.png" 
+    },
+    {
+        "id": "MONITOR",
+        "img": "./img/IMG Menu Seleccionar/MonitorBorder.png" 
+    },
+    {
+        "id": "PERIPHERALS",
+        "img": "./img/IMG Menu Seleccionar/MouseKeyboard.png" 
+    }
+]
