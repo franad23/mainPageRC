@@ -203,7 +203,6 @@ nav {
     display: flex;
     flex-wrap: wrap;
     gap: 15px;
-    /* border: red solid 1px; */
     padding: 10px;
 }
 .imgCard {
@@ -329,8 +328,14 @@ nav {
     nav {
         padding: 10px 20px;
     }
+    .iconCards {
+        display: block;
+    }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+    .iconCards {
+        display: block;
+    }
     .bottleNeckCalCont {
         padding: 5px;
     }
@@ -388,6 +393,9 @@ nav {
 
 }
 @media (min-width: 768px) and (max-width: 992px) {
+    .iconCards {
+        display: block;
+    }
     .btnOffCanvasOpt {
         display: block;
     }

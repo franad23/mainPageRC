@@ -260,6 +260,9 @@ hr {
 /* -----------MEDIAQUERIES---------- */
 
 @media (max-width: 426px) {
+    .iconCards {
+        display: block;
+    }
     .lastNewsCardsCont {
         justify-content: center;
     }
@@ -293,6 +296,9 @@ hr {
     }
 }
 @media (min-width: 426px) and (max-width: 768px) {
+    .iconCards {
+        display: block;
+    }
     .lastNewsCardsCont {
         justify-content: space-evenly;
     }
@@ -315,6 +321,9 @@ hr {
     }
 }
 @media (min-width: 768px) and (max-width: 992px) {
+    .iconCards {
+        display: block;
+    }
     .lastNewsCardsCont {
         justify-content: space-evenly;
     }
