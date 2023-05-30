@@ -26,5 +26,19 @@
         "password": "Juancardozo123!",
         "acepted": true,
         "admin": true
+    },
+    {
+        "name": "Camila Gonella",
+        "email": "camila@camila.com",
+        "password": "Camilagonella123!",
+        "acepted": false,
+        "admin": false
+    },
+    {
+        "name": "Nicole Romero",
+        "email": "nicole@nicole.com",
+        "password": "Nicoleromero123!",
+        "acepted": false,
+        "admin": false
     }
 ]
