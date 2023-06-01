@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Franco Diaz",
+        "email": "franco@franco.com",
+        "password": "Francodiaz123!",
+        "acepted": true,
+        "admin": true
+    },
+    {
+        "name": "Mauro Perez",
+        "email": "mauro@mauro.com",
+        "password": "Mauroperez123!",
+        "acepted": true,
+        "admin": true
+    },
+    {
+        "name": "Juan Martin Raimondo",
+        "email": "juanm@juanm.com",
+        "password": "Juanraimondo123!",
+        "acepted": true,
+        "admin": true
+    },
+    {
+        "name": "Juan Luca Cardozo",
+        "email": "juanl@juanl.com",
+        "password": "Juancardozo123!",
+        "acepted": true,
+        "admin": true
+    }
+]

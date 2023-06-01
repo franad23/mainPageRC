@@ -1,0 +1,412 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+:root {
+    --font-Logo-title: 'Oswald', sans-serif;
+    --font-navBar: "Ubuntu", monospace;
+    --font-rest: "Ubuntu mono", monospace;
+    --font-weigth-rest: 700;
+    --background-landingPage: linear-gradient(180deg, #5B3567 0%, #090f1f 43%);
+    --background-btn: rgb(253, 47, 92);
+    --background-btnGradient: linear-gradient(54deg, #fd2f5c 0%, #fe8c01 100%);
+    --background-navBar: #5B3567;
+    --background-cards: #090f1f;
+    --background-body-mainPage: #090f1f;
+    --heartFav-Color: rgb(253, 47, 92);
+
+}
+.liFooter {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+body {
+    background: var(--background-body-mainPage);
+    background-attachment: fixed;
+    /* width: 100vw;
+    height: 100vh; */
+}
+.title {
+    color: rgb(0, 0, 0);
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 0;
+    font-family: var(--font-Logo-title);
+
+}
+main{
+    height: 100vh;
+}
+a {
+    text-decoration: none;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 40px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #5B3567;
+}
+.optNavBar {
+    font-family: var(--font-navBar);
+    font-weight: var(--font-weigth-rest);
+    border-radius: 5px;
+    color: white;
+    text-decoration: none;
+    /* background: var(--background-btn); */
+    background: var(--background-btnGradient);
+    padding: 10px 40px;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+.optNavBar:active {
+    transform: translate(3px,3px);
+    -webkit-transform: translate(3px,3px);
+    -moz-transform: translate(3px,3px);
+}
+.usersCartCont {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.optNavBarCont {
+    display: flex;
+    justify-content: space-evenly;
+    width: 50%;
+}
+.iconUserNavBar{
+    color: white;
+    font-size: 1.5rem;
+}
+.admin {
+    display: none;
+}
+.prodCont {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* flex-wrap: wrap; */
+}
+/* -----------Tarjeta producto--------- */
+.iconContCard {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+i {
+    font-family: var(--background-navBar) !important;
+}
+.priceCardContName {
+    margin-top: 5%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: var(--font-rest);
+}
+.priceCardCont {
+    width: 60%;
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+.cardProdCont {
+    display: flex;
+    /* width: 60vw; */
+    height: 40vh;
+    margin: 20px 0;
+    border: transparent solid 1px;
+    border-radius: 15px;
+    color: white;
+    /* flex-wrap: wrap; */
+    /* background-color: var(--background-cards);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1); */
+}
+.lastNewsCardsCont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+}
+.disc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:medium;
+}
+.iconCards {
+    display: none;
+    color: white;
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    font-size: 30px;
+    text-align: end;
+}
+.iconAddToCart {
+    display: none;
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    font-size: 30px;
+}
+/* .iconCards:hover {
+    cursor: pointer;
+    color: var(--heartFav-Color);
+}
+.cardProdCont:hover {
+    cursor: pointer;
+    .bi {
+        color: var(--heartFav-Color);
+        display: block;
+    }
+} */
+.imgCard {
+    /* width:100%; */
+    height:100%;
+    /* object-fit: cover; */
+
+}
+.imgCardContLN {
+    width: 50%;
+}
+.btnComprar {
+    margin: auto;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 10px;
+    background: var(--background-btnGradient);
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+
+/* -----------Tarjeta producto--------- */
+/* ---------DropddownMenuNavBar---------- */
+.dropdownOpt {
+    display: none;
+    border: none;
+    background: var(--background-btnGradient);
+    outline: none;
+    -webkit-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    -moz-box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+    box-shadow: 3px 3px 0px 0px rgba(184,35,69,1);
+}
+.dropdown-menu {
+    background: var(--background-btnGradient);
+}
+.optNavBarDropDown {
+    font-family: var(--font-navBar);
+    font-weight: var(--font-weigth-rest);
+    padding-left: 5%;
+    text-decoration: none;
+    color: white;
+    border: 1px solid transparent;
+}
+.dropdown-toggle::after {
+    display: none;
+    content: "";
+}
+/* ---------DropddownMenuNavBar---------- */
+/* -----------DropDownUserNavBar---------- */
+button {
+    outline: none;
+
+}
+.dropdownUser {
+    background: none;
+    border: none;
+    outline: none;
+}
+h2 {
+    font-size: 3rem;
+    font-family: var(--font-Logo-title);
+}
+#noResultsMessage{
+    font-size: 3rem;
+    color: red;
+}
+/* ----------FOOTER---------- */
+footer {
+    display: flex;
+    background:  #5B3567;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    color: white;
+    width: 100%;
+    border-top: 3px white solid;
+    margin-top: 30px;
+    padding-bottom: 20px;
+}
+.logo {
+    padding-top: 40px;
+    font-family: var(--font-Logo-title);
+}
+.sections {
+    padding-top: 20px;
+    font-family: var(--font-rest);
+    font-weight: 100;
+    font-size: 0.8rem;
+}
+.contact {
+    padding-top: 40px;
+    font-family: var(--font-rest);
+    font-size: 0.8rem;
+}
+
+/* -----------MEDIAQUERIES---------- */
+
+@media (max-width: 426px) {
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logoCont {
+        display: none;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    .cardProdCont {
+        flex-direction: column;
+        width: 100%;
+    }
+    .imgCard {
+        width:80%;
+    }
+    .imgCardContLN {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .priceCardContName {
+        width: 100%;
+        flex-direction: column;
+    }
+    .priceCardCont {
+
+        width: 60%;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    main {
+        height: 100vh;
+    }
+    
+}
+@media (min-width: 426px) and (max-width: 768px) {
+    /* main{width: 100%;} */
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .logoCont {
+        display: flex;
+        gap: 10px;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    .cardProdCont {
+        /* flex-direction: column; */
+        width: 100%;
+    }
+    .imgCard {
+        width:80%;
+    }
+    .imgCardContLN {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+    .priceCardContName {
+        width: 100%;
+        flex-direction: column;
+        
+    }
+    .priceCardCont {
+
+        width: 60%;
+        justify-content: space-evenly;
+        flex-direction: column;
+    }
+    main {
+        height: 100vh;
+    }
+    /* footer {
+        position: absolute;
+        bottom: 0;
+    } */
+}
+@media (min-width: 768px) and (max-width: 992px) {
+    .logoCont {
+        display: flex;
+        gap: 10px;
+    }
+    .optNavBarCont {
+        display: none;
+    }
+    .dropdown-toggle{
+        display: block;
+    }
+    nav {
+        padding: 10px 20px;
+    }
+    main {
+        height: 20vh;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .optNavBar {
+        padding: 10px 20px;
+    }
+    main {
+        height: 30vh;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+
+}
+@media (min-width: 1200px) {
+    main {
+        height: 20vh;
+    }
+    footer {
+        position: absolute;
+        bottom: 0;
+    }
+}
+

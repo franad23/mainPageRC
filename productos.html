@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Rolling Code Gaming Store</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/productos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<!-- <i class="bi bi-heart-fill"></i> -->
+
+<body>
+    <nav>
+        <div class="dropdown">
+            <a class="btn btn-secondary dropdown-toggle dropdownOpt" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                <i class="bi bi-list"></i>
+            </a>
+            <ul class="dropdown-menu">
+                <li><a class="optNavBarDropDown" href="./armaTuPc.html">Arma tu PC</a></li>
+                <li><a class="optNavBarDropDown" href="./productos.html">Productos</a></li>
+                <li><a class="optNavBarDropDown" href="./aboutus.html">Nosotros</a></li>
+            </ul>
+        </div>
+        <div class="logoCont">
+            <a href="./mainPage.html">
+                <h1 class="title">ROLLING CODE</h1>
+                <h1 class="title">GAMING STORE</h1>
+            </a>
+        </div>
+        <div class="optNavBarCont">
+            <a class="optNavBar" href="./armaTuPc.html">Arma tu PC</a>
+            <a class="optNavBar" href="./productos.html">Productos</a>
+            <a class="optNavBar" href="./aboutus.html">Nosotros</a>
+        </div>
+        <div class="usersCartCont">
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions" onclick="modalFav()"><i
+                    class="bi bi-heart iconUserNavBar"></i></button>
+            <div class="dropdown">
+                <a class="btn dropdown-toggle dropdownUser" href="#" role="button" data-bs-toggle="dropdown"
+                    aria-expanded="false">
+                    <i class="bi bi-person-circle iconUserNavBar"></i></a>
+                <ul class="dropdown-menu dropdownUserMenu">
+                    <li><a class="optNavBarDropDown optNavBarDropDownToLogin" href="./login.html">Iniciar Sesion</a>
+                    </li>
+                    <li><a class="optNavBarDropDown optNavBarDropDownUser " href="./404.html">Perfil</a></li>
+                    <li><a class="optNavBarDropDown optNavBarDropDownUser" href="" id="logOut">Cerrar Sesion</a></li>
+                </ul>
+            </div>
+
+            <button class="btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                aria-controls="offcanvasRight"><i class="bi bi-cart iconUserNavBar" onclick="modalCart()"></i></button>
+            <a href="./crud.html" class="admin"><i class="bi bi-person-fill-gear iconUserNavBar"></i></a>
+        </div>
+        <!-- Cuerpo offCanvas favoritos -->
+        <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header">
+                <h1 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Tus favoritos!</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offCanvasFavCont">
+
+            </div>
+        </div>
+        <!-- Cuerpo offCanvas favoritos -->
+        <!-- ------Offcanvas Carrito------- -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 class="offcanvas-title" id="offcanvasRightLabel">Tu Carrito:</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body offCanvasCart">
+            </div>
+            <div class="btnPaidOffCanvasCont">
+                <h1>Total: $<span id="totalCart"></span>ARS</h1>
+            </div>
+            <button class="btnPaidOffCanvas" onclick="to404()">Ir a pagar</button>
+        </div>
+        
+        <!-- ------Offcanvas Carrito------- -->
+    </nav>
+    <main>
+
+        <div class="inputSearchCont">
+            <label for="">Busca Tu producto:</label><input type="search" id="inputSearch">
+            <select name="" id="select">
+                <option class="options" value="TODO">Todos los productos</option>
+                <option class="options" value="processor">Procesador</option>
+                <option class="options" value="graphicCard">Placas de video</option>
+                <option class="options" value="Motherboard">Placa Madre</option>
+                <option class="options" value="RAM">Memorias RAM</option>
+                <option class="options" value="FAN">Coolers</option>
+                <option class="options" value="POWER">fuentes de poder</option>
+                <option class="options" value="MONITOR">Monitores</option>
+                <option class="options" value="PERIPHERALS">Perifericos</option>
+                <option class="options" value="DISK">Almacenamiento</option>
+            </select>
+        </div>
+        <div class="cardsCont">
+        </div>
+    </main>
+    <footer>
+        <div class="sections">
+            <h3>Secciones</h3>
+            <a href="./mainPage.html" class="list-group-item list-group-item-action" aria-current="true">
+                Pagina Principal
+            </a>
+            <a href="./register.html" class="list-group-item list-group-item-action ">Registrarse</a>
+            <a href="./productos.html" class="list-group-item list-group-item-action ">Catalogo</a>
+            <a href="./aboutus.html" class="list-group-item list-group-item-action ">Acerca de nosotros</a>
+        </div>
+        <div class="logo">
+            <h3>Rolling Code Gaming Store</h3>
+        </div>
+        <div class="contact">
+            <ul>
+                <li class="liFooter"><i class="fa-brands fa-facebook-f" style="color: #fff;"></i>RollingCodeGamingStore</li>
+                <li class="liFooter"><i class="fa-brands fa-instagram"></i>RollingCodeGamingStore</li>
+                <li class="liFooter"><i class="fa-solid fa-at"></i>RollingCodeGamingStore</li>
+            </ul>
+        </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+    <script type="module" src="./js/productos.js"></script>
+    <script src="./js/Class.js"></script>
+</body>
+
+</html>
